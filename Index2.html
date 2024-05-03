@@ -7,6 +7,7 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
+
 <style>
   .about-section {
     text-align: center;
@@ -309,47 +310,71 @@ html {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#home" onclick="closeNavbar()">Home</a>
+          <a class="nav-link" href="#home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#about" onclick="closeNavbar()">About</a>
+          <a class="nav-link" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#projects" onclick="closeNavbar()">Projects</a>
+          <a class="nav-link" href="#projects">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#Services" onclick="closeNavbar()">Services</a>
+          <a class="nav-link" href="#Services">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact" onclick="closeNavbar()">Contact</a>
+          <a class="nav-link" href="#contact">Contact</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<script>
-  function closeNavbar() {
-    // Close the collapsed navbar after a navigation link is clicked
-    $('.navbar-collapse').collapse('hide');
-  }
-</script>
-<script>
-  function closeNavbar() {
-    // Add a small delay before collapsing the navbar
-    setTimeout(function() {
-      $('.navbar-collapse').collapse('hide');
-    }, 100);
-  }
-</script>
-    
-
-
-
-
 <!-- Bootstrap JS and dependencies (jQuery and Popper) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.5/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // Smooth scroll to section on click
+  $(document).ready(function() {
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+      
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });
+</script>
+
+<script>
+  // Remember scroll position after clicking a navbar link
+  $(document).ready(function() {
+    $('a.nav-link').on('click', function() {
+      sessionStorage.setItem('scrollPosition', $(window).scrollTop());
+    });
+
+    var scrollPosition = sessionStorage.getItem('scrollPosition');
+    if (scrollPosition) {
+      $(window).scrollTop(scrollPosition);
+      sessionStorage.removeItem('scrollPosition');
+    }
+  });
+</script>
+
 </body>
 </html>
