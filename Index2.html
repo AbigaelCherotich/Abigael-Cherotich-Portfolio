@@ -334,7 +334,14 @@ html {
     $('.navbar-collapse').collapse('hide');
   }
 </script>
-
+<script>
+  function closeNavbar() {
+    // Add a small delay before collapsing the navbar
+    setTimeout(function() {
+      $('.navbar-collapse').collapse('hide');
+    }, 100);
+  }
+</script>
     
 
 
