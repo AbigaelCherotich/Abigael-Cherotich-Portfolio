@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me Section</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Make sure styles.css exists in your project -->
+  <style>
+    /* General Body Styling */
+    body {
+      font-family: Arial, sans-serif;
+      padding-top: 56px; /* Adjust based on navbar height */
+    }
+    
+    /* About Section */
+    .about-section {
+      padding: 60px 0;
+    }
+    
+    .about-section img {
+      max-width: 200px;
+    }
+    
+    .about-section h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    
+    .about-section h3 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    
+    .about-section h4 {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      color: #666;
+    }
+    
+    .about-section p {
+      font-size: 1em;
+      line-height: 1.6;
+    }
+    
+    .about-section .fab {
+      margin-right: 10px;
+    }
+    
+    /* Projects Section */
+    .projects-section {
+      padding: 60px 0;
+    }
+    
+    .projects-section h2 {
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+    }
+    
+    .projects-section .card {
+      box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Adds a subtle shadow around the card */
+    }
+    
+    .projects-section .card-img-top {
+      max-height: 180px; /* Adjust this value to fit the image properly in the card */
+      object-fit: cover; /* This makes sure the image covers the area properly */
+    }
+    
+    .projects-section .card-body {
+      padding: 15px;
+    }
+    
+    
+  </style>
+</head>
+<body>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <img src="images/maggie.jpg" alt="Maggie Wolff" class="img-fluid rounded-circle mb-3">
+        <h3>Maggie Wolff</h3>
+        <p>Data Scientist</p>
+        <p><i class="fas fa-map-marker-alt"></i> Chicago, IL USA</p>
+        <p>
+          <a href="https://www.linkedin.com/in/maggie-wolff/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a><br>
+          <a href="https://github.com/maggiewolff" target="_blank"><i class="fab fa-github"></i> Github</a>
+        </p>
+      </div>
+      <div class="col-md-8">
+        <h2>Maggie Wolff</h2>
+        <h4>Data Scientist focused on Product Analytics in the Travel Tech industry.</h4>
+        <h3>About Me</h3>
+        <p>Naturally curious and observant. Thrives on new challenges and never stops seeking out learning opportunities and sharing knowledge.</p>
+        <p>I enjoy solving problems with data, whether that is a personal problem, like creating <a href="#">my own recommender model</a> to figure out what to wear when running through another chilly Chicago winter, or on the job, using data to create better user experiences.</p>
+        <p>My current work typically includes advanced analysis, A/B (hypothesis) testing, predictive modeling, and defining new metrics. I also enjoy mentoring and <a href="#">knowledge sharing</a> with colleagues and others in the industry.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section bg-light">
+  <div class="container">
+    <h2 class="text-center">Projects</h2>
+    <div class="row">
+      <!-- Project 1 -->
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="images/projects/clustering.png" class="card-img-top custom-image" alt="Customer segmentation & clustering">
+          <div class="card-body">
+            <h5 class="card-title">Customer segmentation & clustering</h5>
+            <p class="card-text">Implemented K-means clustering methodology to partition the customer base of mall clients according to demographic variables including age, gender, income, and expenditure patterns. Employed segmentation strategies to tailor marketing initiatives and mall amenities for enhanced customer satisfaction and accelerated business expansion, aligning services with the distinctive preferences and behaviors of each identified segment.</p>
+            <a href="https://github.com/AbigaelCherotich/Abigael-Cherotich-Portfolio/blob/main/Segmentation%20%26%20clustering.ipynb" class="btn btn-secondary" target="_blank">View code</a>
+            <a href="https://drive.google.com/file/d/1n-sAtXamsv2T02rUsMUkKd2eRTNn19Hb/view?usp=sharing" class="btn btn-primary" target="_blank">View clustering report</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Project 2 -->
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <img src="images/projects/Data Analysis Background.png" class="card-img-top" alt="Data Analysis">
+          <div class="card-body">
+            <h5 class="card-title">Data Analysis</h5>
+            <p class="card-text">Often, companies have data that contain a lot of hidden information. Asking the right questions and analyzing the data will give you relevant insights. The goal is to answer the right questions that will help the company to make the right decisions. The case below is an example of sales analysis whereby I was trying to understand the customer journey from point of entry to point of shopping/drop out.</p>
+            <a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FAbigaelCherotich%2FDashboard-goal-setting%2Fmain%2Fdatafile.docx" class="btn btn-secondary" target="_blank">View data analysis report</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="Services-section">
+  <div class="container">
+    <h2 class="text-center">My Services</h2>
+    <div class="row">
+      <!-- Service 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/services/1.png" class="card-img-top" alt="Data Analysis">
+          <div class="card-body">
+            <h5 class="card-title">Data Analysis</h5>
+            <p class="card-text">Using advanced statistical methods and tools to derive insights from data and drive business decisions.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Service 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/services/2.png" class="card-img-top" alt="Predictive Modeling">
+          <div class="card-body">
+            <h5 class="card-title">Predictive Modeling</h5>
+            <p class="card-text">Developing models to forecast trends and outcomes based on historical data.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Service 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/services/3.png" class="card-img-top" alt="A/B Testing">
+          <div class="card-body">
+            <h5 class="card-title">A/B Testing</h5>
+            <p class="card-text">Designing and analyzing experiments to compare different versions of a product or service.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2>Contact Me</h2>
+        <p class="mb-5">Ready to start your next project with me? That's great! Give me a call or send me an email and I will get back to you as soon as possible!</p>
+        <p><i class="fas fa-envelope mr-2"></i> magwolff@example.com</p>
+        <p><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</p>
+        <a href="https://www.linkedin.com/in/maggie-wolff/" target="_blank"><img src="images/social/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+        <a href="https://github.com/maggiewolff" target="_blank"><img src="images/social/github.png" alt="GitHub" class="social-icon"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 bg-dark text-white text-center">
+  <div class="container">
+    <p>&copy; 2024 Maggie Wolff - All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Bootstrap and Font Awesome Scripts -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
